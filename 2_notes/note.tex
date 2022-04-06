@@ -1,0 +1,93 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,ulem,graphicx,caption,color,setspace,sectsty,comment,footmisc,caption,natbib,pdflscape,array,hyperref}
+\usepackage[en-US]{datetime2}
+\usepackage{booktabs}
+\usepackage{longtable} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage{endnotes}
+\let\footnote=\endnote
+% WORKING
+\usepackage{caption, subcaption} 
+\usepackage[nomarkers,nolists]{endfloat}
+
+\usepackage{dsfont}
+\normalem
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\usepackage{bm}
+\usepackage[title]{appendix}
+
+\usepackage{booktabs, fixltx2e}
+\usepackage[flushleft]{threeparttable}
+
+
+\onehalfspacing
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{subhyp}{Hypothesis}[hyp]
+\renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\newcommand\cites[1]{\citeauthor{#1}'s\ (\citeyear{#1})}
+
+\usepackage{mathtools, nccmath}
+
+\begin{document}
+
+%\begin{titlepage}
+\title{Meeting Notes on Environmental Issues Related to Agriculture }
+
+\author{Raghav Goyal and Siddhartha Bora}
+
+
+\date{}
+\maketitle
+\doublespacing
+
+\subsection*{Meeting Notes, April 1, 2022}
+\begin{itemize}
+    \item Possible topics:
+    \begin{enumerate}
+        \item Agriculture and Climate Change
+        \item Potential use of GIS data
+        \item Agricultural Policy issues relevant to Farm Bill: Cover crops, CRP etc. 
+    \end{enumerate}
+    \item Timeline:
+    \begin{enumerate}
+        \item Generate an idea and do some analysis by summer.
+        \item Working paper by Fall 2022. 
+    \end{enumerate}
+    \item Project Housekeeping: 
+    \begin{enumerate}
+        \item Keep this note file updated after we meet for future reference, and for sharing ideas.
+        \item Do all the Overleaf writing inside the ``2\_notes" subfolder, and commit to github from Overleaf.
+        \item The ``2\_notes/references.bib" file is synced with a Mendeley group. Create a Mendeley account and upload the related papers to that group. We can read and annotate the references there. I think you don't have to link Mendeley to Overleaf for this project as it is already synced through my account. I have to add you in Mendeley.  
+        \item Do all data cleaning within ``0\_data". If you are analysing large raw data files in your local machine, keep it inside ``0\_data/raw", which is ign ored for version control. Only small, cleaned dataset may be kept inside ``0\_data/clean" for shared analysis, if the data sharing policies of the relevant dataset allows uploading to third party websites.
+        \item Similarly, do all analysis within ``1\_analysis". Use relative file paths to access figures and tables from ``2\_notes".
+        \item The repository is created through R project of same name, so it will work with R seamlessly. But we can keep any other tools.
+    \end{enumerate}
+\end{itemize}
+
+
+
+\pagebreak
+\begin{singlespace}
+\setlength\bibsep{0pt}
+\bibliographystyle{chicago}
+\bibliography{references.bib}
+\end{singlespace}
+\end{document}
